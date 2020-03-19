@@ -5,18 +5,15 @@
 
 class EmailParser
 
-  attr_accessor :name :email
+  attr_accessor :emails
 
-  def initialize(name)
-    @name = name
-  @email = email
+  def initialize(email)
+    @emails = email
   end
 
   def parse
-    @email.split.collect{|e|e.split(/[,\s]+/)}
-
+    @emails.split(/[,\s]+/)
   end
-
-
+  
 
 end
