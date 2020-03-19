@@ -12,8 +12,10 @@ class EmailParser
   end
 
   def parse
-    @eamil.split(/[,\s]+/)
-  end
+    array = @eamil.split(/[,\s]+/)
+    array. collect {|element| element.uniq}
+  end 
+
 
 
 end
